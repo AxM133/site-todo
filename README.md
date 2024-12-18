@@ -14,7 +14,10 @@
 
 ## 🖥️ **Демонстрация проекта**
 
-
+![TODO-App PC Light/Dark Theme](./assets/screenshots/pc_screen_dark_with_task.png)
+![TODO-App PC Light/Dark Theme](./assets/screenshots/pc_screen_with_task_light.png)
+![TODO-App Mob Light/Dark Theme](./assets/screenshots/mob_screen_dark.png)
+![TODO-App Mob Light/Dark Theme](./assets/screenshots/mob_screen_light.png)
 
 ---
 

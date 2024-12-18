@@ -1,0 +1,143 @@
+:root {
+  /* Light Theme */
+  --bg-color: #f9fafb; /* Светлый фон */
+  --card-bg: #ffffff; /* Белый цвет для карточек */
+  --text-color: #1f2937; /* Тёмно-серый текст */
+  --hover-bg: #e5e7eb; /* Серый цвет для hover */
+  --border-color: #d1d5db; /* Светлая граница */
+  --button-bg: #3b82f6; /* Синий для кнопок */
+  --button-hover-bg: #2563eb; /* Тёмно-синий для hover */
+  --button-text-color: #ffffff; /* Белый текст на кнопках */
+  --complete-bg-color: #e5e7eb;
+  --bg-text-header-color: #1f2937;
+
+  --transition-duration: 0.3s;
+}
+
+/* Dark Theme */
+.dark {
+  --bg-color: #1e1e1e; /* Тёмный фон */
+  --card-bg: #2a2a2a; /* Тёмные карточки */
+  --text-color: #f3f4f6; /* Светлый текст */
+  --hover-bg: #3b3b3b; /* Тёмный серый для hover */
+  --border-color: #444444; /* Тёмная граница */
+  --button-bg: #3b82f6; /* Синий для кнопок */
+  --button-hover-bg: #2563eb; /* Тёмно-синий для hover */
+  --button-text-color: #ffffff; /* Белый текст на кнопках */
+  --complete-bg-color: #212121;
+}
+
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: var(--font-size);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+    color: var(--text-color);
+  }
+  
+  * {
+    transition: all 0.3s ease; /* Добавим плавность ко всем элементам */
+  }
+  
+  button:hover,
+  input:focus,
+  .todo-item:hover,
+  .filter-button:hover {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  input,
+  button,
+  .todo-item span,
+  .filter-button {
+    font-size: var(--font-size);
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  button {
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    transition: background-color var(--transition-duration);
+  }
+
+  button:hover {
+    background-color: var(--button-hover-bg);
+  }
+  
+  input {
+    outline: none;
+    border: none;
+    font-family: inherit;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a, input, .filter-button {
+    color: var(--text-color);
+  }
+
+  .filter-button:hover {
+    background-color: var(--hover-bg);
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .rounded {
+    border-radius: 8px;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .todo-item {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 12px;
+    }
+  
+    .header-title {
+      font-size: 2rem;
+    }
+  
+    .todo-input,
+    .filter-button {
+      font-size: 0.9rem;
+    }
+  }
+  

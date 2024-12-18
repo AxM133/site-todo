@@ -1,0 +1,28 @@
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 16px 0px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  .filter-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    transition: background-color var(--transition-duration);
+  }
+  
+  .filter-button:hover,
+  .filter-button.active {
+    background-color: var(--hover-bg);
+    color: var(--button-text-color);
+  }
+  

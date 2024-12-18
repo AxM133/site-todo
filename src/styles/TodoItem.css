@@ -1,0 +1,104 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-duration);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color var(--transition-duration);
+}
+
+.todo-item.completed {
+    background-color: var(--complete-bg-color);
+    opacity: 0.8;
+}
+
+.todo-item:hover {
+    background-color: var(--hover-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
+.checkbox-container {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid var(--border-color);
+    background-color: hsl(235, 24%, 19%);
+    transition: all 0.3s ease;
+}
+
+.checkbox-container.checked {
+    background-color: var(--button-bg);
+    border-color: var(--button-bg);
+}
+
+.checkbox-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.animated-check {
+    stroke-dasharray: 45; /* Регулируем длину галочки */
+    stroke-dashoffset: 45;
+    stroke-width: 3; /* Увеличиваем толщину линии галочки */
+    animation: check-animation 0.5s ease forwards;
+}
+
+@keyframes check-animation {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.todo-item.completed span {
+    color: hsl(236, 9%, 61%);
+    text-decoration: line-through;
+}
+
+.todo-item span {
+    flex: 1;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin-left: 15px;
+}
+
+.todo-item button {
+    color: hsl(0, 78%, 62%);
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-size: 1.5rem;
+}
+
+.todo-item button:hover {
+    color: hsl(0, 78%, 52%);
+    transform: scale(1.2);
+    background: transparent;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

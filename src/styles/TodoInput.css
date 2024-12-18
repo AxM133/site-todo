@@ -1,0 +1,38 @@
+.todo-input-container {
+    padding: 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+  }
+  
+  .todo-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--text-color);
+    padding-left: 15px;
+  }
+  
+  .todo-button {
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration), transform var(--transition-duration);
+  }
+  
+  .todo-button:hover {
+    background-color: var(--button-hover-bg);
+    transform: scale(1.05);
+  }
+  
+  .todo-button:active {
+    transform: scale(0.95);
+  }
+  

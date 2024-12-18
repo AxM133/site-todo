@@ -1,0 +1,6 @@
+.switcher-color {
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    padding: 8px 16px;
+    border-radius: 8px;
+}
